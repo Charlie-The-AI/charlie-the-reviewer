@@ -1,6 +1,6 @@
 {
   "name": "@sonofman01/charlie-the-reviewer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Charlie the Reviewer: Universal automated AI-powered code reviews for GitHub pull requests and local Git changes, supporting OpenAI and Google Gemini.",
   "type": "module",
   "main": "./dist/index.js",
