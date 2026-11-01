@@ -1,23 +1,35 @@
+
 import { defineConfig } from "tsup";
 
-export default defineConfig({
-  entry: {
-    index: "src/index.ts",
-    "cli/index": "src/cli/index.ts",
+export default defineConfig([
+  // Library build
+  {
+    entry: {
+      index: "src/index.ts",
+    },
+    format: ["esm"],
+    dts: true,
+    sourcemap: true,
+    clean: true,
+    target: "node22",
+    splitting: false,
+    shims: true,
   },
-  format: ["esm"],
-  dts: true,
-  sourcemap: true,
-  clean: true,
-  target: "node22",
-  splitting: false,
-  shims: true,
-  banner({ entry }) {
-    if (entry === "cli/index") {
-      return {
-        js: "#!/usr/bin/env node",
-      };
-    }
-    return {};
+
+  // CLI build
+  {
+    entry: {
+      "cli/index": "src/cli/index.ts",
+    },
+    format: ["esm"],
+    dts: false,
+    sourcemap: true,
+    clean: false,
+    target: "node22",
+    splitting: false,
+    shims: true,
+    banner: {
+      js: "#!/usr/bin/env node",
+    },
   },
-});
+]);
