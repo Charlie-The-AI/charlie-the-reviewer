@@ -349,4 +349,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for lo
 
 ## 📄 License
 
-Distributed under the [MIT License](LICENSE). Copyright © 2026 The Son of Man.
+Distributed under the [MIT License](LICENSE). Copyright © 2026 Akiode Timothy.
