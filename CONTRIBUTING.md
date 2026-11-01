@@ -1,6 +1,6 @@
-# Contributing to `@thesonofman/ai-code-reviewer`
+# Contributing to `@thesonofman/charlie-the-reviewer`
 
-Thank you for your interest in contributing to `@thesonofman/ai-code-reviewer`!
+Thank you for your interest in contributing to `@thesonofman/charlie-the-reviewer`!
 
 ---
 
@@ -15,8 +15,8 @@ Thank you for your interest in contributing to `@thesonofman/ai-code-reviewer`!
 ### Initial Setup
 
 ```bash
-git clone https://github.com/thesonofman/ai-code-reviewer.git
-cd ai-code-reviewer
+git clone https://github.com/thesonofman/charlie-the-reviewer.git
+cd charlie-the-reviewer
 npm install
 ```
 

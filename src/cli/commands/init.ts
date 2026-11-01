@@ -3,8 +3,8 @@ import { resolve } from "node:path";
 import pc from "picocolors";
 import { logger } from "../../utils/logger.js";
 
-const DEFAULT_CONFIG_YAML = `# AI Code Reviewer Configuration
-# Documentation: https://github.com/thesonofman/ai-code-reviewer
+const DEFAULT_CONFIG_YAML = `# Charlie the Reviewer Configuration
+# Documentation: https://github.com/thesonofman/charlie-the-reviewer
 
 ai:
   # Supported providers: openai, gemini
@@ -101,6 +101,6 @@ export async function runInitCommand(options: { force?: boolean } = {}): Promise
   console.log(`    or`);
   console.log(`    ${pc.gray('export GEMINI_API_KEY="your_key_here"')}`);
   console.log(` 2. Run a review on your working tree:`);
-  console.log(`    ${pc.green("npx ai-code-reviewer review")}`);
+  console.log(`    ${pc.green("npx charlie-the-reviewer review")}`);
   console.log();
 }

@@ -1,6 +1,6 @@
 # Review Strictness Levels & Overrides
 
-`@thesonofman/ai-code-reviewer` features four configurable review strictness levels backed by a deterministic policy engine.
+`@thesonofman/charlie-the-reviewer` features four configurable review strictness levels backed by a deterministic policy engine.
 
 ---
 

@@ -1,6 +1,6 @@
 # Next.js Integration Example
 
-This example demonstrates how to configure `@thesonofman/ai-code-reviewer` in a Next.js (App Router or Pages Router) codebase.
+This example demonstrates how to configure `@thesonofman/charlie-the-reviewer` in a Next.js (App Router or Pages Router) codebase.
 
 ## Key Features
 
@@ -15,5 +15,5 @@ This example demonstrates how to configure `@thesonofman/ai-code-reviewer` in a 
 export OPENAI_API_KEY="your-key-here"
 
 # Review your current branch changes against main
-npx ai-code-reviewer review --base main
+npx charlie-the-reviewer review --base main
 ```

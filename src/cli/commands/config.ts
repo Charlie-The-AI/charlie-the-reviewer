@@ -11,7 +11,7 @@ export async function runConfigValidateCommand(options: { config?: string }): Pr
 
   if (!file) {
     logger.error("No AI Code Reviewer configuration file found in this directory.");
-    console.log(pc.gray("Run `ai-code-reviewer init` to generate a configuration file."));
+    console.log(pc.gray("Run `charlie-the-reviewer init` to generate a configuration file."));
     return 1;
   }
 

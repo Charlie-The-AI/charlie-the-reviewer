@@ -1,6 +1,6 @@
 # GitHub Actions Workflow Example
 
-This directory contains a battle-tested, secure GitHub Actions workflow for `@thesonofman/ai-code-reviewer`.
+This directory contains a battle-tested, secure GitHub Actions workflow for `@thesonofman/charlie-the-reviewer`.
 
 ## Security Highlights
 

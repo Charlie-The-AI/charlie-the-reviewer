@@ -21,7 +21,7 @@ Automated AI code reviewers process untrusted source code and diffs. Security mu
 
 ## 2. Privacy & Data Transmission Notice
 
-When running `@thesonofman/ai-code-reviewer`:
+When running `@thesonofman/charlie-the-reviewer`:
 
 - Changed file diffs and surrounding context lines are transmitted over HTTPS to your configured AI provider (`api.openai.com` or `generativelanguage.googleapis.com`).
 - Check your provider's terms of service regarding data retention and model training. Both OpenAI API and Google Gemini API (paid tiers) do not use API data to train models.

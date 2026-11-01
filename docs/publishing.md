@@ -1,6 +1,6 @@
 # npm Publishing & Release Management Guide
 
-This document describes how `@thesonofman/ai-code-reviewer` is packaged, versioned, and published to the npm registry using Changesets and GitHub Actions Trusted Publishing (OIDC).
+This document describes how `@thesonofman/charlie-the-reviewer` is packaged, versioned, and published to the npm registry using Changesets and GitHub Actions Trusted Publishing (OIDC).
 
 ---
 
@@ -90,11 +90,11 @@ npm publish --access public
 
 Once the first version is published on npm, configure **Trusted Publishing**:
 
-1. On npmjs.com, go to `@thesonofman/ai-code-reviewer` > **Settings** > **Publishing Access**.
+1. On npmjs.com, go to `@thesonofman/charlie-the-reviewer` > **Settings** > **Publishing Access**.
 2. Select **Add GitHub Actions**.
 3. Specify:
    - Organization/User: `thesonofman`
-   - Repository: `ai-code-reviewer`
+   - Repository: `charlie-the-reviewer`
    - Workflow file: `.github/workflows/release.yml`
 4. The workflow in `.github/workflows/release.yml` will automatically publish updates to npm with cryptographic provenance whenever changes are merged to `main`.
 
@@ -111,5 +111,5 @@ echo "test" > test.txt
 git add test.txt && git commit -m "initial commit"
 
 # Test CLI execution
-npx --yes @thesonofman/ai-code-reviewer review --staged
+npx --yes @thesonofman/charlie-the-reviewer review --staged
 ```

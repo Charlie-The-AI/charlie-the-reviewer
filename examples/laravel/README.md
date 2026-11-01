@@ -1,6 +1,6 @@
 # Laravel PHP Integration Example
 
-This example demonstrates how to configure `@thesonofman/ai-code-reviewer` for Laravel PHP applications.
+This example demonstrates how to configure `@thesonofman/charlie-the-reviewer` for Laravel PHP applications.
 
 ## Key Features
 
@@ -12,5 +12,5 @@ This example demonstrates how to configure `@thesonofman/ai-code-reviewer` for L
 
 ```bash
 # Review the latest commit
-npx ai-code-reviewer review --commit HEAD
+npx charlie-the-reviewer review --commit HEAD
 ```

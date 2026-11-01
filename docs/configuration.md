@@ -1,6 +1,6 @@
 # Configuration Reference
 
-`@thesonofman/ai-code-reviewer` looks for configuration files in the root directory in the following order:
+`@thesonofman/charlie-the-reviewer` looks for configuration files in the root directory in the following order:
 
 - `.ai-reviewer.yml`
 - `.ai-reviewer.yaml`

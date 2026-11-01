@@ -1,13 +1,13 @@
 {
-  "name": "@thesonofman/ai-code-reviewer",
+  "name": "@thesonofman/charlie-the-reviewer",
   "version": "0.1.0",
-  "description": "Universal automated AI-powered code reviews for GitHub pull requests and local Git changes, supporting OpenAI and Google Gemini.",
+  "description": "Charlie the Reviewer: Universal automated AI-powered code reviews for GitHub pull requests and local Git changes, supporting OpenAI and Google Gemini.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "ai-code-reviewer": "./dist/cli/index.js"
+    "charlie-the-reviewer": "./dist/cli/index.js"
   },
   "exports": {
     ".": {
@@ -56,7 +56,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thesonofman/ai-code-reviewer.git"
+    "url": "https://github.com/thesonofman/charlie-the-reviewer.git"
   },
   "dependencies": {
     "@google/genai": "^2.32.0",

@@ -1,6 +1,6 @@
-# Getting Started with `@thesonofman/ai-code-reviewer`
+# Getting Started with `@thesonofman/charlie-the-reviewer`
 
-`@thesonofman/ai-code-reviewer` provides automated, AI-powered code reviews for GitHub pull requests and local Git changes, with native support for OpenAI and Google Gemini.
+`@thesonofman/charlie-the-reviewer` provides automated, AI-powered code reviews for GitHub pull requests and local Git changes, with native support for OpenAI and Google Gemini.
 
 ---
 
@@ -11,17 +11,17 @@ Install the package globally or as a project development dependency:
 ### Project Dependency (Recommended)
 
 ```bash
-npm install -D @thesonofman/ai-code-reviewer
+npm install -D @thesonofman/charlie-the-reviewer
 # or
-pnpm add -D @thesonofman/ai-code-reviewer
+pnpm add -D @thesonofman/charlie-the-reviewer
 # or
-yarn add -D @thesonofman/ai-code-reviewer
+yarn add -D @thesonofman/charlie-the-reviewer
 ```
 
 ### Global Installation
 
 ```bash
-npm install -g @thesonofman/ai-code-reviewer
+npm install -g @thesonofman/charlie-the-reviewer
 ```
 
 ---
@@ -50,13 +50,13 @@ export GEMINI_API_KEY="AIzaSy..."
 Generate an `.ai-reviewer.yml` configuration file:
 
 ```bash
-npx ai-code-reviewer init
+npx charlie-the-reviewer init
 ```
 
 Verify your configuration with:
 
 ```bash
-npx ai-code-reviewer config validate
+npx charlie-the-reviewer config validate
 ```
 
 ---
@@ -66,26 +66,26 @@ npx ai-code-reviewer config validate
 ### Review Local Working Tree Changes
 
 ```bash
-npx ai-code-reviewer review
+npx charlie-the-reviewer review
 ```
 
 ### Review Staged Changes Only
 
 ```bash
-npx ai-code-reviewer review --staged
+npx charlie-the-reviewer review --staged
 ```
 
 ### Review Differences Against Main Branch
 
 ```bash
-npx ai-code-reviewer review --base main
+npx charlie-the-reviewer review --base main
 ```
 
 ### Review a GitHub Pull Request
 
 ```bash
 export GITHUB_TOKEN="ghp_..."
-npx ai-code-reviewer review --pr 42 --post-github
+npx charlie-the-reviewer review --pr 42 --post-github
 ```
 
 ---
@@ -95,7 +95,7 @@ npx ai-code-reviewer review --pr 42 --post-github
 You can also run reviews programmatically inside node scripts or custom CI tools:
 
 ```typescript
-import { createReviewer } from "@thesonofman/ai-code-reviewer";
+import { createReviewer } from "@thesonofman/charlie-the-reviewer";
 
 const reviewer = createReviewer({
   provider: "openai",

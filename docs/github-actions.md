@@ -1,6 +1,6 @@
 # GitHub Actions Integration Guide
 
-Integrating `@thesonofman/ai-code-reviewer` into GitHub Actions provides automated inline feedback and status checks directly on pull requests.
+Integrating `@thesonofman/charlie-the-reviewer` into GitHub Actions provides automated inline feedback and status checks directly on pull requests.
 
 ---
 
@@ -59,7 +59,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          npx --yes @thesonofman/ai-code-reviewer review \
+          npx --yes @thesonofman/charlie-the-reviewer review \
             --pr ${{ github.event.pull_request.number }} \
             --post-github
 ```

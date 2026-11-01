@@ -56,6 +56,6 @@ jobs:
           AI_REVIEW_PROVIDER: ${{ inputs.provider }}
           AI_REVIEW_STRICTNESS: ${{ inputs.strictness }}
         run: |
-          npx ai-code-reviewer review \
+          npx charlie-the-reviewer review \
             --pr ${{ github.event.pull_request.number }} \
             --post-github

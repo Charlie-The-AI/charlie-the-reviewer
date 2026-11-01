@@ -1,6 +1,6 @@
 # AI Providers Reference
 
-`@thesonofman/ai-code-reviewer` employs a provider-agnostic architecture. The core review engine never depends on provider SDKs directly; it interacts with providers through the standardized `AIProvider` interface.
+`@thesonofman/charlie-the-reviewer` employs a provider-agnostic architecture. The core review engine never depends on provider SDKs directly; it interacts with providers through the standardized `AIProvider` interface.
 
 ---
 
@@ -82,7 +82,7 @@ import {
   type AIProvider,
   type AIReviewRequest,
   type AIReviewResponse,
-} from "@thesonofman/ai-code-reviewer";
+} from "@thesonofman/charlie-the-reviewer";
 
 class CustomClaudeProvider implements AIProvider {
   readonly name = "claude";

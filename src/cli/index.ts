@@ -9,9 +9,9 @@ import type { StrictnessLevel } from "../types/index.js";
 const program = new Command();
 
 program
-  .name("ai-code-reviewer")
+  .name("charlie-the-reviewer")
   .description(
-    "Universal automated AI code reviewer for GitHub pull requests and local Git changes"
+    "Charlie the Reviewer: Universal automated AI code reviewer for GitHub pull requests and local Git changes"
   )
   .version("0.1.0")
   .option("-c, --config <path>", "Path to custom configuration YAML file")

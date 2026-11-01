@@ -1,13 +1,13 @@
-# Universal AI Code Reviewer (`@thesonofman/ai-code-reviewer`)
+# Universal AI Code Reviewer (`@thesonofman/charlie-the-reviewer`)
 
-[![CI](https://github.com/thesonofman/ai-code-reviewer/actions/workflows/ci.yml/badge.svg)](https://github.com/thesonofman/ai-code-reviewer/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@thesonofman/ai-code-reviewer.svg)](https://www.npmjs.com/package/@thesonofman/ai-code-reviewer)
+[![CI](https://github.com/thesonofman/charlie-the-reviewer/actions/workflows/ci.yml/badge.svg)](https://github.com/thesonofman/charlie-the-reviewer/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@thesonofman/charlie-the-reviewer.svg)](https://www.npmjs.com/package/@thesonofman/charlie-the-reviewer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen.svg)](package.json)
 
 **Universal, automated, AI-powered code reviews for GitHub Pull Requests and local Git changes.**
 
-Built with TypeScript and Node.js 22+, `@thesonofman/ai-code-reviewer` offers a provider-agnostic engine with native support for **OpenAI** and **Google Gemini**, 4-tier strictness policies, custom review rules, path overrides, prompt injection defense, and GitHub Actions PR commenting.
+Built with TypeScript and Node.js 22+, `@thesonofman/charlie-the-reviewer` offers a provider-agnostic engine with native support for **OpenAI** and **Google Gemini**, 4-tier strictness policies, custom review rules, path overrides, prompt injection defense, and GitHub Actions PR commenting.
 
 ---
 
@@ -22,7 +22,7 @@ Built with TypeScript and Node.js 22+, `@thesonofman/ai-code-reviewer` offers a 
 - **Context-Aware Analysis:** Bounded surrounding context (types, imports, tests) without overflowing token limits.
 - **Cost & Token Controls:** Built-in token budgeting, patch chunking, and live USD cost estimates.
 - **DevSecOps by Design:** Built-in secret redaction, safe argument array execution (zero shell interpolation), and defense against embedded prompt injection attacks.
-- **Dual API:** CLI binary (`ai-code-reviewer`) and fully typed programmatic TypeScript library (`createReviewer`).
+- **Dual API:** CLI binary (`charlie-the-reviewer`) and fully typed programmatic TypeScript library (`createReviewer`).
 
 ---
 
@@ -32,10 +32,10 @@ Built with TypeScript and Node.js 22+, `@thesonofman/ai-code-reviewer` offers a 
 
 ```bash
 # Install as a dev dependency
-npm install -D @thesonofman/ai-code-reviewer
+npm install -D @thesonofman/charlie-the-reviewer
 
 # Or install globally
-npm install -g @thesonofman/ai-code-reviewer
+npm install -g @thesonofman/charlie-the-reviewer
 ```
 
 ### 2. Configure Your AI Provider
@@ -58,7 +58,7 @@ export GEMINI_API_KEY="AIzaSy..."
 ### 3. Initialize Configuration
 
 ```bash
-npx ai-code-reviewer init
+npx charlie-the-reviewer init
 ```
 
 This creates an `.ai-reviewer.yml` file in your repository root.
@@ -67,16 +67,16 @@ This creates an `.ai-reviewer.yml` file in your repository root.
 
 ```bash
 # Review local uncommitted working tree changes
-npx ai-code-reviewer review
+npx charlie-the-reviewer review
 
 # Review staged changes
-npx ai-code-reviewer review --staged
+npx charlie-the-reviewer review --staged
 
 # Review branch differences against main
-npx ai-code-reviewer review --base main
+npx charlie-the-reviewer review --base main
 
 # Review specific commit
-npx ai-code-reviewer review --commit HEAD~1
+npx charlie-the-reviewer review --commit HEAD~1
 ```
 
 ---
@@ -98,7 +98,7 @@ ai:
 
 ```bash
 export OPENAI_API_KEY="sk-..."
-npx ai-code-reviewer review
+npx charlie-the-reviewer review
 ```
 
 ### Google Gemini Setup
@@ -114,17 +114,17 @@ ai:
 
 ```bash
 export GEMINI_API_KEY="AIzaSy..."
-npx ai-code-reviewer review
+npx charlie-the-reviewer review
 ```
 
 ### Switch On-the-Fly via CLI or Environment Variable
 
 ```bash
 # CLI flag
-npx ai-code-reviewer review --provider gemini --model gemini-2.5-flash
+npx charlie-the-reviewer review --provider gemini --model gemini-2.5-flash
 
 # Environment variables (ideal for CI matrix jobs)
-AI_REVIEW_PROVIDER=gemini AI_REVIEW_MODEL=gemini-2.5-flash npx ai-code-reviewer review
+AI_REVIEW_PROVIDER=gemini AI_REVIEW_MODEL=gemini-2.5-flash npx charlie-the-reviewer review
 ```
 
 ### Provider Fallback
@@ -244,7 +244,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          npx --yes @thesonofman/ai-code-reviewer review \
+          npx --yes @thesonofman/charlie-the-reviewer review \
             --pr ${{ github.event.pull_request.number }} \
             --post-github
 ```
@@ -256,7 +256,7 @@ jobs:
 Use the library directly in custom tools, bots, or CI scripts:
 
 ```typescript
-import { createReviewer } from "@thesonofman/ai-code-reviewer";
+import { createReviewer } from "@thesonofman/charlie-the-reviewer";
 
 const reviewer = createReviewer({
   provider: "openai",
@@ -287,7 +287,7 @@ for (const finding of result.findings) {
 ## ⚙️ CLI Reference
 
 ```text
-Usage: ai-code-reviewer [options] [command]
+Usage: charlie-the-reviewer [options] [command]
 
 Universal automated AI code reviewer for GitHub pull requests and local Git changes
 
@@ -332,12 +332,12 @@ Commands:
 
 ## 🛠 Troubleshooting
 
-| Problem                             | Cause                                 | Resolution                                                          |
-| :---------------------------------- | :------------------------------------ | :------------------------------------------------------------------ |
-| `Missing OPENAI_API_KEY`            | Environment variable not exported     | Run `export OPENAI_API_KEY="..."` or define it in your CI secrets.  |
-| `Missing GEMINI_API_KEY`            | Environment variable not exported     | Run `export GEMINI_API_KEY="..."` or define it in your CI secrets.  |
-| `Configuration validation failed`   | YAML syntax or schema error           | Run `npx ai-code-reviewer config validate` to inspect field issues. |
-| `Could not create GitHub Check Run` | Insufficient GitHub token permissions | Ensure your GitHub workflow has `permissions: checks: write`.       |
+| Problem                             | Cause                                 | Resolution                                                              |
+| :---------------------------------- | :------------------------------------ | :---------------------------------------------------------------------- |
+| `Missing OPENAI_API_KEY`            | Environment variable not exported     | Run `export OPENAI_API_KEY="..."` or define it in your CI secrets.      |
+| `Missing GEMINI_API_KEY`            | Environment variable not exported     | Run `export GEMINI_API_KEY="..."` or define it in your CI secrets.      |
+| `Configuration validation failed`   | YAML syntax or schema error           | Run `npx charlie-the-reviewer config validate` to inspect field issues. |
+| `Could not create GitHub Check Run` | Insufficient GitHub token permissions | Ensure your GitHub workflow has `permissions: checks: write`.           |
 
 ---
 

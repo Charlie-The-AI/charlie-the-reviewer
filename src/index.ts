@@ -1,6 +1,6 @@
 /**
- * @thesonofman/ai-code-reviewer
- * Universal automated AI-powered code reviews for GitHub pull requests and local Git changes.
+ * @thesonofman/charlie-the-reviewer
+ * Charlie the Reviewer: Universal automated AI-powered code reviews for GitHub pull requests and local Git changes.
  */
 
 // Core Engine & Public Reviewer API
