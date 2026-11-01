@@ -1,0 +1,34 @@
+# Next.js Repository Review Configuration
+ai:
+  provider: openai
+  model: gpt-4o
+
+review:
+  strictness: standard
+  fail_on:
+    - critical
+    - high
+
+  overrides:
+    - paths:
+        - "app/api/**"
+        - "pages/api/**"
+        - "middleware.ts"
+      strictness: maximum
+    - paths:
+        - "components/ui/**"
+      strictness: standard
+
+  custom_rules:
+    - id: server-component-serialization
+      description: "Ensure Server Components only pass serializable props to Client Components"
+      severity: high
+      paths:
+        - "app/**"
+
+    - id: api-route-auth
+      description: "All Next.js API route handlers must verify session credentials"
+      severity: critical
+      paths:
+        - "app/api/**"
+        - "pages/api/**"

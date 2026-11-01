@@ -1,0 +1,34 @@
+# Laravel PHP Review Configuration
+ai:
+  provider: openai
+  model: gpt-4o
+
+review:
+  strictness: standard
+  fail_on:
+    - critical
+    - high
+
+  overrides:
+    - paths:
+        - "app/Http/Middleware/**"
+        - "app/Policies/**"
+        - "routes/**"
+      strictness: maximum
+    - paths:
+        - "resources/views/**"
+      strictness: relaxed
+
+  custom_rules:
+    - id: laravel-form-request-validation
+      description: "Controllers updating or storing Eloquent models must use FormRequest validation instead of raw request data"
+      severity: high
+      paths:
+        - "app/Http/Controllers/**"
+
+    - id: mass-assignment-protection
+      description: "Ensure model updates do not allow mass assignment without fillable or guarded definitions"
+      severity: critical
+      paths:
+        - "app/Models/**"
+        - "app/Http/Controllers/**"

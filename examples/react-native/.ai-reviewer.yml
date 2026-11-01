@@ -1,0 +1,30 @@
+# React Native & Expo Review Configuration
+ai:
+  provider: gemini
+  model: gemini-2.5-flash
+
+review:
+  strictness: standard
+  fail_on:
+    - critical
+    - high
+
+  overrides:
+    - paths:
+        - "src/navigation/**"
+        - "src/services/auth/**"
+        - "ios/**"
+        - "android/**"
+      strictness: maximum
+    - paths:
+        - "src/components/**"
+      strictness: standard
+
+  custom_rules:
+    - id: unmount-cleanup
+      description: "Subscriptions, event listeners (AppState, BackHandler), and timers must be cleaned up in useEffect returns"
+      severity: high
+
+    - id: avoid-blocking-js-thread
+      description: "Heavy computations, synchronous file access, or unthrottled re-renders that stall the 60fps JS thread must be avoided"
+      severity: high

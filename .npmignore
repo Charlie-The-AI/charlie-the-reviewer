@@ -1,0 +1,13 @@
+.*
+node_modules/
+tests/
+examples/
+docs/
+coverage/
+src/
+tsup.config.ts
+tsconfig.json
+eslint.config.js
+vitest.config.ts
+.prettierrc
+*.log

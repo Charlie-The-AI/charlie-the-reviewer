@@ -1,0 +1,80 @@
+import type { ReviewConfig } from "../types/index.js";
+
+export const DEFAULT_CONFIG_FILENAMES = [
+  ".ai-reviewer.yml",
+  ".ai-reviewer.yaml",
+  "ai-reviewer.yml",
+  "ai-reviewer.yaml",
+  ".github/ai-reviewer.yml",
+  ".github/ai-reviewer.yaml",
+];
+
+export const DEFAULT_CONFIG: ReviewConfig = {
+  ai: {
+    provider: "openai",
+    model: "gpt-4o",
+    temperature: 0.1,
+    max_output_tokens: 4000,
+    fallback: {
+      enabled: false,
+      provider: "gemini",
+      model: "gemini-2.5-flash",
+    },
+    models: {
+      relaxed: "gpt-4o-mini",
+      standard: "gpt-4o",
+      strict: "gpt-4o",
+      maximum: "o3-mini",
+    },
+  },
+  review: {
+    strictness: "standard",
+    fail_on: ["critical", "high"],
+    minimum_confidence: 0.75,
+    max_comments: 25,
+    noise_reduction: {
+      enabled: true,
+      deduplicate: true,
+    },
+    overrides: [],
+    custom_rules: [],
+    enforcement: {
+      enabled: true,
+      mode: "status_check",
+    },
+  },
+  limits: {
+    max_files: 50,
+    max_diff_lines: 3000,
+    max_input_tokens: 60000,
+    max_output_tokens: 4000,
+    max_concurrent_requests: 3,
+    timeout_seconds: 120,
+  },
+  ignore: [
+    "**/*.min.js",
+    "**/*.min.css",
+    "**/*.map",
+    "**/package-lock.json",
+    "**/pnpm-lock.yaml",
+    "**/yarn.lock",
+    "**/composer.lock",
+    "**/Gemfile.lock",
+    "**/go.sum",
+    "**/Cargo.lock",
+    "**/dist/**",
+    "**/build/**",
+    "**/.git/**",
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.jpeg",
+    "**/*.gif",
+    "**/*.svg",
+    "**/*.ico",
+    "**/*.pdf",
+    "**/*.woff",
+    "**/*.woff2",
+    "**/*.ttf",
+    "**/*.eot",
+  ],
+};
