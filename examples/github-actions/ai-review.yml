@@ -36,6 +36,6 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          npx --yes @thesonofman/charlie-the-reviewer review \
+          npx --yes @Timbaron/charlie-the-reviewer review \
             --pr ${{ github.event.pull_request.number }} \
             --post-github

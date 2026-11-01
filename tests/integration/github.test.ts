@@ -68,7 +68,7 @@ describe("GitHub Integration", () => {
     process.env = {
       ...originalEnv,
       GITHUB_TOKEN: "ghp_mocktoken1234567890abcdef12345678",
-      GITHUB_REPOSITORY: "thesonofman/charlie-the-reviewer",
+      GITHUB_REPOSITORY: "Timbaron/charlie-the-reviewer",
     };
   });
 
@@ -78,7 +78,7 @@ describe("GitHub Integration", () => {
 
   it("fetches PR metadata and list of changed files with pagination", async () => {
     const client = new GitHubClient();
-    expect(client.owner).toBe("thesonofman");
+    expect(client.owner).toBe("sonofman01");
     expect(client.repo).toBe("charlie-the-reviewer");
 
     const meta = await fetchPullRequestMetadata(client, 42);
@@ -96,7 +96,7 @@ describe("GitHub Integration", () => {
     const reporter = new GitHubReporter({
       pullNumber: 42,
       commitSha: "abc123commitsha",
-      repository: "thesonofman/charlie-the-reviewer",
+      repository: "Timbaron/charlie-the-reviewer",
     });
 
     const mockResult: ReviewResult = {

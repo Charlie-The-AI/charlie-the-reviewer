@@ -4,7 +4,7 @@ import pc from "picocolors";
 import { logger } from "../../utils/logger.js";
 
 const DEFAULT_CONFIG_YAML = `# Charlie the Reviewer Configuration
-# Documentation: https://github.com/thesonofman/charlie-the-reviewer
+# Documentation: https://github.com/Timbaron/charlie-the-reviewer
 
 ai:
   # Supported providers: openai, gemini

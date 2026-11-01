@@ -1,5 +1,5 @@
 /**
- * Core type definitions for @thesonofman/charlie-the-reviewer
+ * Core type definitions for @Timbaron/charlie-the-reviewer
  */
 
 export type Severity = "critical" | "high" | "medium" | "low";

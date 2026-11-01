@@ -1,6 +1,6 @@
 # Next.js Integration Example
 
-This example demonstrates how to configure `@thesonofman/charlie-the-reviewer` in a Next.js (App Router or Pages Router) codebase.
+This example demonstrates how to configure `@Timbaron/charlie-the-reviewer` in a Next.js (App Router or Pages Router) codebase.
 
 ## Key Features
 

@@ -1,13 +1,13 @@
-# Universal AI Code Reviewer (`@thesonofman/charlie-the-reviewer`)
+# Universal AI Code Reviewer (`@Timbaron/charlie-the-reviewer`)
 
-[![CI](https://github.com/thesonofman/charlie-the-reviewer/actions/workflows/ci.yml/badge.svg)](https://github.com/thesonofman/charlie-the-reviewer/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@thesonofman/charlie-the-reviewer.svg)](https://www.npmjs.com/package/@thesonofman/charlie-the-reviewer)
+[![CI](https://github.com/Timbaron/charlie-the-reviewer/actions/workflows/ci.yml/badge.svg)](https://github.com/Timbaron/charlie-the-reviewer/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@Timbaron/charlie-the-reviewer.svg)](https://www.npmjs.com/package/@Timbaron/charlie-the-reviewer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen.svg)](package.json)
 
 **Universal, automated, AI-powered code reviews for GitHub Pull Requests and local Git changes.**
 
-Built with TypeScript and Node.js 22+, `@thesonofman/charlie-the-reviewer` offers a provider-agnostic engine with native support for **OpenAI** and **Google Gemini**, 4-tier strictness policies, custom review rules, path overrides, prompt injection defense, and GitHub Actions PR commenting.
+Built with TypeScript and Node.js 22+, `@Timbaron/charlie-the-reviewer` offers a provider-agnostic engine with native support for **OpenAI** and **Google Gemini**, 4-tier strictness policies, custom review rules, path overrides, prompt injection defense, and GitHub Actions PR commenting.
 
 ---
 
@@ -32,10 +32,10 @@ Built with TypeScript and Node.js 22+, `@thesonofman/charlie-the-reviewer` offer
 
 ```bash
 # Install as a dev dependency
-npm install -D @thesonofman/charlie-the-reviewer
+npm install -D @Timbaron/charlie-the-reviewer
 
 # Or install globally
-npm install -g @thesonofman/charlie-the-reviewer
+npm install -g @Timbaron/charlie-the-reviewer
 ```
 
 ### 2. Configure Your AI Provider
@@ -244,7 +244,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          npx --yes @thesonofman/charlie-the-reviewer review \
+          npx --yes @Timbaron/charlie-the-reviewer review \
             --pr ${{ github.event.pull_request.number }} \
             --post-github
 ```
@@ -256,7 +256,7 @@ jobs:
 Use the library directly in custom tools, bots, or CI scripts:
 
 ```typescript
-import { createReviewer } from "@thesonofman/charlie-the-reviewer";
+import { createReviewer } from "@Timbaron/charlie-the-reviewer";
 
 const reviewer = createReviewer({
   provider: "openai",

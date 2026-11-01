@@ -1,6 +1,6 @@
-# Getting Started with `@thesonofman/charlie-the-reviewer`
+# Getting Started with `@Timbaron/charlie-the-reviewer`
 
-`@thesonofman/charlie-the-reviewer` provides automated, AI-powered code reviews for GitHub pull requests and local Git changes, with native support for OpenAI and Google Gemini.
+`@Timbaron/charlie-the-reviewer` provides automated, AI-powered code reviews for GitHub pull requests and local Git changes, with native support for OpenAI and Google Gemini.
 
 ---
 
@@ -11,17 +11,17 @@ Install the package globally or as a project development dependency:
 ### Project Dependency (Recommended)
 
 ```bash
-npm install -D @thesonofman/charlie-the-reviewer
+npm install -D @Timbaron/charlie-the-reviewer
 # or
-pnpm add -D @thesonofman/charlie-the-reviewer
+pnpm add -D @Timbaron/charlie-the-reviewer
 # or
-yarn add -D @thesonofman/charlie-the-reviewer
+yarn add -D @Timbaron/charlie-the-reviewer
 ```
 
 ### Global Installation
 
 ```bash
-npm install -g @thesonofman/charlie-the-reviewer
+npm install -g @Timbaron/charlie-the-reviewer
 ```
 
 ---
@@ -95,7 +95,7 @@ npx charlie-the-reviewer review --pr 42 --post-github
 You can also run reviews programmatically inside node scripts or custom CI tools:
 
 ```typescript
-import { createReviewer } from "@thesonofman/charlie-the-reviewer";
+import { createReviewer } from "@Timbaron/charlie-the-reviewer";
 
 const reviewer = createReviewer({
   provider: "openai",

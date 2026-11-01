@@ -1,5 +1,5 @@
 /**
- * @thesonofman/charlie-the-reviewer
+ * @Timbaron/charlie-the-reviewer
  * Charlie the Reviewer: Universal automated AI-powered code reviews for GitHub pull requests and local Git changes.
  */
 

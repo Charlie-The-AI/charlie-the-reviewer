@@ -1,6 +1,6 @@
 # React Native / Expo Integration Example
 
-This example demonstrates how to configure `@thesonofman/charlie-the-reviewer` for mobile applications using React Native or Expo.
+This example demonstrates how to configure `@Timbaron/charlie-the-reviewer` for mobile applications using React Native or Expo.
 
 ## Key Features
 

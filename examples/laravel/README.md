@@ -1,6 +1,6 @@
 # Laravel PHP Integration Example
 
-This example demonstrates how to configure `@thesonofman/charlie-the-reviewer` for Laravel PHP applications.
+This example demonstrates how to configure `@Timbaron/charlie-the-reviewer` for Laravel PHP applications.
 
 ## Key Features
 

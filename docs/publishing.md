@@ -1,6 +1,6 @@
 # npm Publishing & Release Management Guide
 
-This document describes how `@thesonofman/charlie-the-reviewer` is packaged, versioned, and published to the npm registry using Changesets and GitHub Actions Trusted Publishing (OIDC).
+This document describes how `@Timbaron/charlie-the-reviewer` is packaged, versioned, and published to the npm registry using Changesets and GitHub Actions Trusted Publishing (OIDC).
 
 ---
 
@@ -8,7 +8,7 @@ This document describes how `@thesonofman/charlie-the-reviewer` is packaged, ver
 
 1. **npm Account:** Register an account on [npmjs.com](https://www.npmjs.com/).
 2. **Organization / Scope:**
-   - The package is scoped to `@thesonofman`. Ensure you belong to the `@thesonofman` organization on npm, or create the organization under your account settings.
+   - The package is scoped to `@sonofman01`. Ensure you belong to the `@sonofman01` organization on npm, or create the organization under your account settings.
    - For public scoped packages, npm publishes with `--access public`.
 
 ---
@@ -90,10 +90,10 @@ npm publish --access public
 
 Once the first version is published on npm, configure **Trusted Publishing**:
 
-1. On npmjs.com, go to `@thesonofman/charlie-the-reviewer` > **Settings** > **Publishing Access**.
+1. On npmjs.com, go to `@Timbaron/charlie-the-reviewer` > **Settings** > **Publishing Access**.
 2. Select **Add GitHub Actions**.
 3. Specify:
-   - Organization/User: `thesonofman`
+   - Organization/User: `sonofman01`
    - Repository: `charlie-the-reviewer`
    - Workflow file: `.github/workflows/release.yml`
 4. The workflow in `.github/workflows/release.yml` will automatically publish updates to npm with cryptographic provenance whenever changes are merged to `main`.
@@ -111,5 +111,5 @@ echo "test" > test.txt
 git add test.txt && git commit -m "initial commit"
 
 # Test CLI execution
-npx --yes @thesonofman/charlie-the-reviewer review --staged
+npx --yes @Timbaron/charlie-the-reviewer review --staged
 ```

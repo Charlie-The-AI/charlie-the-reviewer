@@ -1,6 +1,6 @@
-# Contributing to `@thesonofman/charlie-the-reviewer`
+# Contributing to `@Timbaron/charlie-the-reviewer`
 
-Thank you for your interest in contributing to `@thesonofman/charlie-the-reviewer`!
+Thank you for your interest in contributing to `@Timbaron/charlie-the-reviewer`!
 
 ---
 
@@ -15,7 +15,7 @@ Thank you for your interest in contributing to `@thesonofman/charlie-the-reviewe
 ### Initial Setup
 
 ```bash
-git clone https://github.com/thesonofman/charlie-the-reviewer.git
+git clone https://github.com/Timbaron/charlie-the-reviewer.git
 cd charlie-the-reviewer
 npm install
 ```
